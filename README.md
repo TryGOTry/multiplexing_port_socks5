@@ -1,0 +1,2 @@
+# multiplexing_port_socks5
+一款golang写的支持http与socks5的端口复用小工具，并且可以开启socks5代理。
