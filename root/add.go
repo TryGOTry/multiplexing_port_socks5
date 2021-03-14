@@ -17,7 +17,7 @@ func Add(listenport string, address string, connectport string, connectaddress s
 	} else {
 		Cmd("netsh interface portproxy add v4tov4 listenport=" + listenport + " listenaddress=" + connectaddress + " connectport=" + connectport + " connectaddress=" + connectaddress)
 		c1 := Cmd("netsh interface portproxy show all")
-		fmt.Println(c1)
+		//fmt.Println(c1)
 		if strings.Contains(c1, connectaddress) == true && strings.Contains(c1, connectport) {
 			log.Println("[Info] 监听ip:", address, " 端口:", listenport)
 			log.Println("[Info] 转发ip:", connectaddress, " 转发端口:", connectport)
